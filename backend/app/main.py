@@ -71,7 +71,7 @@ def root(request: Request):
     """Serves the interactive Spam Shield web application or JSON metadata."""
     accept = request.headers.get("accept", "")
     index_file = STATIC_DIR / "index.html"
-    if ("text/html" in accept or "*/*" in accept) and "application/json" not in accept and index_file.exists():
+    if index_file.exists() and "application/json" not in accept:
         return FileResponse(index_file)
     return {
         "service": settings.PROJECT_NAME,
