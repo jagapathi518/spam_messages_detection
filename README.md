@@ -1,7 +1,7 @@
 # 🛡️ Spam Shield: Real-Time Mobile Text Scam & Phishing Defense System
 
-[![Backend CI & ML Integrity](https://github.com/your-username/spam_shield/actions/workflows/backend_ci.yml/badge.svg)](https://github.com/your-username/spam_shield/actions)
-[![Build Android APK](https://github.com/your-username/spam_shield/actions/workflows/apk_release.yml/badge.svg)](https://github.com/your-username/spam_shield/actions)
+[![Backend CI & ML Integrity](https://github.com/jagapathi518/spam_messages_detection/actions/workflows/backend_ci.yml/badge.svg)](https://github.com/jagapathi518/spam_messages_detection/actions)
+[![Build Android APK](https://github.com/jagapathi518/spam_messages_detection/actions/workflows/apk_release.yml/badge.svg)](https://github.com/jagapathi518/spam_messages_detection/actions)
 [![Python Version](https://img.shields.io/badge/Python-3.12%20%7C%203.14-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![Flutter](https://img.shields.io/badge/Flutter-Material%203-02569B.svg?logo=flutter&logoColor=white)](https://flutter.dev)
@@ -130,7 +130,7 @@ spam_shield/
 ### 1. Prerequisites & Environment Setup
 Clone the repository and create your virtual environment:
 ```bash
-git clone https://github.com/your-username/spam_shield.git
+git clone https://github.com/jagapathi518/spam_messages_detection.git
 cd spam_shield
 
 # Configure secrets
