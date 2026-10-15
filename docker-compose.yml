@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  spam-shield:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: spam_shield_api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - backend/.env
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./ml/artifacts:/app/ml/artifacts:ro
+      - spam_shield_data:/app/backend/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+volumes:
+  spam_shield_data:

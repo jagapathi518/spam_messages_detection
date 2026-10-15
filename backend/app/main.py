@@ -51,13 +51,42 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from fastapi import Request
+from pathlib import Path
+from starlette.staticfiles import StaticFiles
+from starlette.responses import FileResponse
+
 # Include Routers
 app.include_router(health.router, tags=["Health & Telemetry"])
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
+# Mount Static Web App
+STATIC_DIR = Path(__file__).resolve().parent / "static"
+if STATIC_DIR.exists():
+    app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
-@app.get("/", tags=["Root"])
-def root():
+
+@app.get("/", tags=["Web Application"])
+def root(request: Request):
+    """Serves the interactive Spam Shield web application or JSON metadata."""
+    accept = request.headers.get("accept", "")
+    index_file = STATIC_DIR / "index.html"
+    if ("text/html" in accept or "*/*" in accept) and "application/json" not in accept and index_file.exists():
+        return FileResponse(index_file)
+    return {
+        "service": settings.PROJECT_NAME,
+        "version": settings.VERSION,
+        "status": "operational",
+        "documentation": "/docs",
+        "health": "/health",
+        "metrics": "/metrics",
+        "api_v1": settings.API_V1_STR
+    }
+
+
+@app.get("/api", tags=["API Root"])
+def api_info():
+    """Returns API service discovery metadata."""
     return {
         "service": settings.PROJECT_NAME,
         "version": settings.VERSION,
@@ -72,3 +101,4 @@ def root():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("backend.app.main:app", host="0.0.0.0", port=8000, reload=True)
+

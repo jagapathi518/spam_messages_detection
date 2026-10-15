@@ -8,12 +8,21 @@ client = TestClient(app)
 
 def test_root_endpoint():
     """Verify root endpoint metadata."""
-    response = client.get("/")
+    response = client.get("/", headers={"Accept": "application/json"})
     assert response.status_code == 200
     data = response.json()
     assert data["status"] == "operational"
     assert "documentation" in data
     assert "api_v1" in data
+
+
+def test_root_html_serves_web_app():
+    """Verify root endpoint serves interactive HTML web application to browsers."""
+    response = client.get("/", headers={"Accept": "text/html"})
+    assert response.status_code == 200
+    assert "Spam Shield" in response.text
+    assert "Live Scanner" in response.text
+
 
 
 def test_health_endpoint():

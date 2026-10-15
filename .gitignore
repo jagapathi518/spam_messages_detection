@@ -35,6 +35,8 @@ wheels/
 .coverage
 htmlcov/
 *.log
+*.db
+*.sqlite3
 
 # Mobile / Flutter / Dart
 mobile/.dart_tool/
