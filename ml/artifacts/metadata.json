@@ -1,0 +1,46 @@
+{
+  "model_type": "CalibratedClassifierCV(LogisticRegression)",
+  "feature_union": {
+    "word_ngrams": [
+      1,
+      2
+    ],
+    "char_ngrams": [
+      2,
+      5
+    ],
+    "max_features_word": 12000,
+    "max_features_char": 25000
+  },
+  "optimal_threshold": 0.5,
+  "cv_5fold_f1_mean": 0.9817978721958717,
+  "cv_5fold_f1_std": 0.0031991133415628214,
+  "naive_bayes_cv_f1_mean": 0.9730359278138456,
+  "test_metrics": {
+    "accuracy": 0.977922077922078,
+    "precision": 0.9642857142857143,
+    "recall": 0.8526315789473684,
+    "f1_score": 0.9050279329608939,
+    "roc_auc": 0.9959298245614034,
+    "pr_auc": 0.9810476217512974,
+    "false_positive_rate": 0.0044444444444444444
+  },
+  "confusion_matrix": {
+    "true_negatives": 672,
+    "false_positives": 3,
+    "false_negatives": 14,
+    "true_positives": 81
+  },
+  "cross_source_evaluation": {
+    "trained_base_eval_synthetic_f1": 0.6915088576664631,
+    "trained_synthetic_eval_base_f1": 0.33532934131736525
+  },
+  "training_stats": {
+    "total_training_samples": 5069,
+    "base_training_samples": 3590,
+    "synthetic_samples": 1479,
+    "validation_samples": 769,
+    "test_samples": 770,
+    "elapsed_seconds": 18.37
+  }
+}

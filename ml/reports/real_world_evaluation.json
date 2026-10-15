@@ -1,0 +1,154 @@
+{
+  "timestamp": "2026-10-15 23:08:07",
+  "total_messages": 221,
+  "overall_accuracy": 1.0,
+  "spam_recall": 1.0,
+  "false_positive_rate": 0.0,
+  "categories": [
+    {
+      "category": "appointment",
+      "ground_truth": "SAFE",
+      "total": 7,
+      "accuracy": 1.0,
+      "spam_recall": null,
+      "false_positive_rate": 0.0
+    },
+    {
+      "category": "bank_alert",
+      "ground_truth": "SAFE",
+      "total": 17,
+      "accuracy": 1.0,
+      "spam_recall": null,
+      "false_positive_rate": 0.0
+    },
+    {
+      "category": "casual_chat",
+      "ground_truth": "SAFE",
+      "total": 5,
+      "accuracy": 1.0,
+      "spam_recall": null,
+      "false_positive_rate": 0.0
+    },
+    {
+      "category": "challan_scam",
+      "ground_truth": "SPAM",
+      "total": 12,
+      "accuracy": 1.0,
+      "spam_recall": 1.0,
+      "false_positive_rate": null
+    },
+    {
+      "category": "courier_scam",
+      "ground_truth": "SPAM",
+      "total": 12,
+      "accuracy": 1.0,
+      "spam_recall": 1.0,
+      "false_positive_rate": null
+    },
+    {
+      "category": "delivery",
+      "ground_truth": "SAFE",
+      "total": 13,
+      "accuracy": 1.0,
+      "spam_recall": null,
+      "false_positive_rate": 0.0
+    },
+    {
+      "category": "hinglish_chat",
+      "ground_truth": "SAFE",
+      "total": 17,
+      "accuracy": 1.0,
+      "spam_recall": null,
+      "false_positive_rate": 0.0
+    },
+    {
+      "category": "job_scam",
+      "ground_truth": "SPAM",
+      "total": 12,
+      "accuracy": 1.0,
+      "spam_recall": 1.0,
+      "false_positive_rate": null
+    },
+    {
+      "category": "kyc_scam",
+      "ground_truth": "SPAM",
+      "total": 18,
+      "accuracy": 1.0,
+      "spam_recall": 1.0,
+      "false_positive_rate": null
+    },
+    {
+      "category": "loan_scam",
+      "ground_truth": "SPAM",
+      "total": 12,
+      "accuracy": 1.0,
+      "spam_recall": 1.0,
+      "false_positive_rate": null
+    },
+    {
+      "category": "lottery_scam",
+      "ground_truth": "SPAM",
+      "total": 8,
+      "accuracy": 1.0,
+      "spam_recall": 1.0,
+      "false_positive_rate": null
+    },
+    {
+      "category": "obfuscated_spam",
+      "ground_truth": "SPAM",
+      "total": 13,
+      "accuracy": 1.0,
+      "spam_recall": 1.0,
+      "false_positive_rate": null
+    },
+    {
+      "category": "otp",
+      "ground_truth": "SAFE",
+      "total": 22,
+      "accuracy": 1.0,
+      "spam_recall": null,
+      "false_positive_rate": 0.0
+    },
+    {
+      "category": "promo_brand",
+      "ground_truth": "SPAM",
+      "total": 11,
+      "accuracy": 1.0,
+      "spam_recall": 0.6364,
+      "false_positive_rate": null
+    },
+    {
+      "category": "recharge",
+      "ground_truth": "SAFE",
+      "total": 7,
+      "accuracy": 1.0,
+      "spam_recall": null,
+      "false_positive_rate": 0.0
+    },
+    {
+      "category": "upi_scam",
+      "ground_truth": "SPAM",
+      "total": 15,
+      "accuracy": 1.0,
+      "spam_recall": 1.0,
+      "false_positive_rate": null
+    },
+    {
+      "category": "utility_scam",
+      "ground_truth": "SPAM",
+      "total": 12,
+      "accuracy": 1.0,
+      "spam_recall": 1.0,
+      "false_positive_rate": null
+    },
+    {
+      "category": "warning_about_scam",
+      "ground_truth": "SAFE",
+      "total": 8,
+      "accuracy": 1.0,
+      "spam_recall": null,
+      "false_positive_rate": 0.0
+    }
+  ],
+  "misclassified": []
+}
